@@ -142,8 +142,8 @@ export default function KnowledgeGraph3D() {
   });
   const nodeIdsToShow = new Set(nodesToShow.map((n) => n.id));
   const linksToShow = allLinks.filter((l) => {
-    const sourceId = typeof l.source === 'string' ? l.source : (l.source as any).id;
-    const targetId = typeof l.target === 'string' ? l.target : (l.target as any).id;
+    const sourceId = typeof l.source === 'string' ? l.source : (l.source as GraphNode).id;
+    const targetId = typeof l.target === 'string' ? l.target : (l.target as GraphNode).id;
     return nodeIdsToShow.has(sourceId) && nodeIdsToShow.has(targetId);
   });
   const filteredGraphData = { nodes: nodesToShow, links: linksToShow };
@@ -230,7 +230,7 @@ export default function KnowledgeGraph3D() {
             nodeThreeObjectExtend={true}
             linkColor={() => "#aaa"}
             backgroundColor="#f8fafc"
-            nodeColor={(node) => (node && typeof node === 'object' && 'color' in node ? (node as any).color : '#cccccc')}
+            nodeColor={(node) => (node && typeof node === 'object' && 'color' in node ? (node as GraphNode).color : '#cccccc')}
             linkDirectionalParticles={2}
             linkDirectionalParticleWidth={2}
           />

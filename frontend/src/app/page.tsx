@@ -16,7 +16,7 @@ export default function Home() {
         Welcome to vyoma
       </h1>
       <p className="text-base xs:text-lg md:text-2xl text-muted-foreground max-w-xl sm:max-w-2xl mb-6 sm:mb-8 bg-white/60 dark:bg-black/30 rounded-xl px-3 sm:px-6 py-3 sm:py-4 shadow-md backdrop-blur-md" style={{fontFamily: 'Inter, ui-sans-serif, system-ui'}}>
-        Enable a new era of human space exploration! Discover, search, and visualize NASA's bioscience experiments and publications with AI-powered insights and knowledge graphs.
+        {"Enable a new era of human space exploration! Discover, search, and visualize NASA's bioscience experiments and publications with AI-powered insights and knowledge graphs."}
       </p>
       <div className="flex gap-2 sm:gap-4 flex-wrap justify-center">
         <Link href="/search">

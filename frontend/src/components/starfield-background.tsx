@@ -13,8 +13,8 @@ export default function StarfieldBackground() {
     let animationId: number;
     let width = window.innerWidth;
     let height = window.innerHeight;
-    let dpr = window.devicePixelRatio || 1;
-    let stars = Array.from({ length: 80 }, () => ({
+    const dpr = window.devicePixelRatio || 1;
+    const stars = Array.from({ length: 80 }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
       r: Math.random() * 0.7 + 0.3,
