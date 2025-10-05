@@ -1,0 +1,26 @@
+/.venv
+/*/.env
+/****/__pycache__
+
+
+# Next.js frontend
+/frontend/node_modules
+/frontend/.next/
+/frontend/out/
+/frontend/build
+/frontend/coverage
+/frontend/.vercel
+/frontend/.pnp*
+/frontend/.yarn/*
+!/frontend/.yarn/patches
+!/frontend/.yarn/plugins
+!/frontend/.yarn/releases
+!/frontend/.yarn/versions
+/frontend/*.tsbuildinfo
+/frontend/next-env.d.ts
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/.pnpm-debug.log*
+/frontend/*.pem
+/frontend/.DS_Store
