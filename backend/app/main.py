@@ -17,5 +17,9 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+@app.get("/health")
+def health():
+    return {"status":"ok"}
+
 #Include endpoint
 app.include_router(router)
