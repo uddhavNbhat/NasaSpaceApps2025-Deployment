@@ -19,8 +19,13 @@ app.add_middleware(
 
 @app.middleware("http")
 async def restrict_origins(request:Request,call_next):
+    """ Middleware to make sure only allowed origin can make request to the fastapi endpoints """
     allowed_origins = [settings.ALLOWED_ORIGIN]
     origin = request.headers.get("origin")
+
+    if request.url.path == "/health":
+        #if request url is for health check, skip the check
+        return await call_next(request)
 
     if origin not in allowed_origins:
         raise HTTPException(status_code=403, detail="Origin not allowed!")
