@@ -11,6 +11,8 @@ router = APIRouter()
 WINDOW_SECONDS = 60
 _rate_store: dict[str, deque] = defaultdict(lambda: deque())
 
+allowed_origins = [settings.ALLOWED_ORIGIN]
+
 
 @router.post("/api/summarize", status_code=200)
 def summarize(payload: Payload, request: Request):
